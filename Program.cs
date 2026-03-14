@@ -6,9 +6,7 @@ namespace JurnalModul4_103082400047
     {
         static void Main(string[] args)
         {
-            // =============================================
-            // BAGIAN A: TABLE DRIVEN (KodeBuah)
-            // =============================================
+           
             Console.WriteLine("=========================================");
             Console.WriteLine("=== TABLE-DRIVEN (KODE BUAH) ===");
             Console.WriteLine("=========================================");
@@ -30,42 +28,39 @@ namespace JurnalModul4_103082400047
             Console.WriteLine("Kode buah untuk Melon     : " + kodeBuah.getKodeBuah("Melon"));
             Console.WriteLine("Kode buah untuk Semangka  : " + kodeBuah.getKodeBuah("Semangka"));
 
-            // =============================================
-            // BAGIAN B: STATE-BASED CONSTRUCTION
-            // =============================================
+            
             Console.WriteLine("\n\n=========================================");
             Console.WriteLine("=== STATE-BASED CONSTRUCTION ===");
             Console.WriteLine("=========================================");
 
-            // GANTI ANGKA 47 INI DENGAN 3 DIGIT TERAKHIR NIM ANDA!
-            // Contoh: Jika NIM Anda 103082400047, maka 3 digit terakhir = 47
-            int tigaDigitTerakhirNIM = 47; // <--- UBAH SESUAI NIM ANDA
+            
+            int tigaDigitTerakhirNIM = 47; 
 
             PosisiKarakterGame karakter = new PosisiKarakterGame(tigaDigitTerakhirNIM);
 
             Console.WriteLine("\n--- SIMULASI 1: Berdiri -> Terbang -> Jongkok ---");
-            karakter.TombolW(); // Berdiri -> Terbang
-            karakter.TombolS(); // Terbang -> Jongkok
+            karakter.TombolW(); 
+            karakter.TombolS(); 
 
             Console.WriteLine("\n--- SIMULASI 2: Jongkok -> Berdiri -> Jongkok -> Tengkurap ---");
-            karakter.TombolW(); // Jongkok -> Berdiri
-            karakter.TombolS(); // Berdiri -> Jongkok
-            karakter.TombolS(); // Jongkok -> Tengkurap
+            karakter.TombolW(); 
+            karakter.TombolS(); 
+            karakter.TombolS(); 
 
             Console.WriteLine("\n--- SIMULASI 3: Tengkurap -> Jongkok -> Berdiri -> Terbang ---");
-            karakter.TombolW(); // Tengkurap -> Jongkok
-            karakter.TombolW(); // Jongkok -> Berdiri
-            karakter.TombolW(); // Berdiri -> Terbang
+            karakter.TombolW(); 
+            karakter.TombolW(); 
+            karakter.TombolW(); 
 
             Console.WriteLine("\n--- SIMULASI 4: Terbang -> Jongkok -> Tengkurap ---");
-            karakter.TombolS(); // Terbang -> Jongkok
-            karakter.TombolS(); // Jongkok -> Tengkurap
+            karakter.TombolS(); 
+            karakter.TombolS(); 
 
             Console.WriteLine("\n=========================================");
             Console.WriteLine("=== SIMULASI SELESAI ===");
             Console.WriteLine($"State akhir: {karakter.GetCurrentState()}");
 
-            Console.ReadLine(); // Agar console tidak langsung tertutup
+            Console.ReadLine(); 
         }
     }
 }
